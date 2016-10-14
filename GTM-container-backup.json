@@ -1,0 +1,614 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2016-10-14 14:42:39",
+    "containerVersion": {
+        "accountId": "542509030",
+        "containerId": "2704232",
+        "containerVersionId": "0",
+        "deleted": false,
+        "container": {
+            "accountId": "542509030",
+            "containerId": "2704232",
+            "name": "demo",
+            "publicId": "GTM-WR2BHT",
+            "timeZoneCountryId": "US",
+            "timeZoneId": "America/Los_Angeles",
+            "notes": "",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1476456138343",
+            "tagManagerUrl": "localhost:9001/#/container/accounts/542509030/containers/2704232/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "tagId": "2",
+                "name": "click logger",
+                "type": "html",
+                "liveOnly": false,
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  console.log({{Page Hostname}}, {{Page URL}}, {{environment}}, {{UAID}});\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1476440117393",
+                "firingTriggerId": [
+                    "9"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "tagId": "1",
+                "name": "log click button",
+                "type": "html",
+                "liveOnly": false,
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  console.log({{user name}}, 'mood is', {{mood}});\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1476375665363",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "tagId": "3",
+                "name": "track user mood",
+                "type": "ua",
+                "liveOnly": false,
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useDebugVersion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "User"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "Mood Change"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventLabel",
+                        "value": "{{user name}}'s mood"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "doubleClick",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setTrackerName",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventValue",
+                        "value": "{{mood}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableLinkId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "dimension",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "{{cd_mood}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{mood}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "{{cd_user name}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{user name}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "{{cd_mood id}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{mood id}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{UAID}}"
+                    }
+                ],
+                "fingerprint": "1476442653876",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "triggerId": "5",
+                "name": "click button",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "click-button"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1476373614119"
+            },
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "triggerId": "9",
+                "name": "click test",
+                "type": "CLICK",
+                "fingerprint": "1476456078524"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "variableId": "4",
+                "name": "UAID",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{environment}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "prod"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "UA-85725615-1"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "dev"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1476455992519",
+                "parentFolderId": "15"
+            },
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "variableId": "6",
+                "name": "cd_mood",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{environment}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "prod"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "1"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1476455926974",
+                "parentFolderId": "14"
+            },
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "variableId": "8",
+                "name": "cd_mood id",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{environment}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "prod"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "3"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1476455941702",
+                "parentFolderId": "14"
+            },
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "variableId": "7",
+                "name": "cd_user name",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{environment}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "prod"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "2"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1476455952638",
+                "parentFolderId": "14"
+            },
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "variableId": "5",
+                "name": "environment",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  if (/gtm-demo/g.test(document.location.pathname)) {\n    return 'prod';\n  } else {\n    return 'dev';\n  }\n}"
+                    }
+                ],
+                "fingerprint": "1476455984693",
+                "parentFolderId": "15"
+            },
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "variableId": "2",
+                "name": "mood",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{mood id}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "Happy!!"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "1"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "So and so..."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "2"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "Leave me alone!!!"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1476456030339",
+                "parentFolderId": "16"
+            },
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "variableId": "1",
+                "name": "mood id",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "mood"
+                    }
+                ],
+                "fingerprint": "1476456041199",
+                "parentFolderId": "16"
+            },
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "variableId": "3",
+                "name": "user name",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  return document.getElementById('username').value;\n}"
+                    }
+                ],
+                "fingerprint": "1476456050516",
+                "parentFolderId": "16"
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "folderId": "16",
+                "name": "App data",
+                "fingerprint": "1476456022959"
+            },
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "folderId": "14",
+                "name": "Custom dimension IDs",
+                "fingerprint": "1476455914809"
+            },
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "folderId": "15",
+                "name": "Utilities",
+                "fingerprint": "1476455978173"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "type": "PAGE_URL",
+                "name": "Page URL",
+                "isEnabled": true
+            },
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname",
+                "isEnabled": true
+            },
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "type": "PAGE_PATH",
+                "name": "Page Path",
+                "isEnabled": true
+            },
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "type": "REFERRER",
+                "name": "Referrer",
+                "isEnabled": true
+            },
+            {
+                "accountId": "542509030",
+                "containerId": "2704232",
+                "type": "EVENT",
+                "name": "Event",
+                "isEnabled": true
+            }
+        ],
+        "fingerprint": "0",
+        "tagManagerUrl": "localhost:9001/#/versions/accounts/542509030/containers/2704232/versions/0?apiLink=version"
+    }
+}
