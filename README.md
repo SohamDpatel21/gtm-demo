@@ -43,7 +43,7 @@ Integration is pretty straightforward and can be done in 3 easy steps.
   </body>
   ```
   Probably this second step is not even necessary because realistically the web application won't probably work without javascript. In case you want to include this snippet anyway, remember to include it immediately after the opening of the body tag.
-3. Initialize the data layer by creating an array named dataLayer globally scoped
+3. Initialize the data layer by creating an array in the global scope named dataLayer
   ```
   <head>
     ...
@@ -59,3 +59,5 @@ Integration is pretty straightforward and can be done in 3 easy steps.
   This simple script need to be executed before loading the GTM library in the HEAD of the page.
   
 Notice that the snippets in steps 1 and 2 can be copied from the GTM page with the container id already setup. They are conveniently offered after creating a new container, but they can be found also in the admin section whenever you need them.
+![GTM installation step 1](https://github.com/deFabius/gtm-demo/blob/master/docs/gtm-install-step1.png)
+![GTM installation step 2](https://github.com/deFabius/gtm-demo/blob/master/docs/gtm-install-step2.png)
